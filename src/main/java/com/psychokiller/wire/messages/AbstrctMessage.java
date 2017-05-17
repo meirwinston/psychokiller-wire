@@ -20,7 +20,8 @@ import java.time.ZonedDateTime;
 @JsonTypeInfo(use = Id.NAME, include = As.PROPERTY, property = "type")
 @JsonIgnoreProperties(ignoreUnknown = true)
 @JsonSubTypes({
-//    @JsonSubTypes.Type(value = AddEventMessage.class),
+    @JsonSubTypes.Type(value = Account.class),
+    @JsonSubTypes.Type(value = User.class),
 })
 public abstract class AbstrctMessage implements Discoverable {
 
